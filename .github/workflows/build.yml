@@ -1,0 +1,24 @@
+name: Build 
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        nodejs: [ 14, 16 ]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.nodejs }}
+      - name: Install
+        run: npm install
+      - name: run build
+        run: npm run build
