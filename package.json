@@ -20,7 +20,7 @@
   "homepage": "https://github.com/TobiasBodo/KonverterTestUI-Web#readme",
   "devDependencies": {
     "@types/webpack": "^5.28.4",
-    "copy-webpack-plugin": "^11.0.0",
+    "copy-webpack-plugin": "^12.0.0",
     "css-loader": "^6.8.1",
     "file-loader": "^6.2.0",
     "html-loader": "^4.2.0",
